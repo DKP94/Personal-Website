@@ -439,6 +439,7 @@ img {
     row-gap: 0;
 }
 
+
 .skills__header{
     display: flex;
     align-items: center;
@@ -625,6 +626,7 @@ img {
 /*==================== CONTACT ME ====================*/
 .contact__container{
     row-gap: 3rem;
+    display: flex;
 }
 
 .contact__information{
@@ -674,6 +676,8 @@ img {
 /*==================== FOOTER ====================*/
 .footer__container{
     row-gap: 3.5rem;
+    display: flex;
+    justify-content: center;
 }
 
 .footer__bg{
@@ -1007,7 +1011,7 @@ img {
         bottom: -4.5rem;
     }
     .contact__form{
-        width: 460px;
+        width: 768px;
     }
     .contact__inputs{
         grid-template-columns: repeat(2,1fr);

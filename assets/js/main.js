@@ -55,20 +55,17 @@ skillsHeader.forEach(el=>{
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
       tabContents = document.querySelectorAll('[data-content]')
-let selection = true;
+
 tabs.forEach(tab=>{
     tab.addEventListener('click',()=>{
+        let prevSelected = localStorage.getItem('selection') == 'workButton' ? 'workButton' :'educationButton';
         const target = document.querySelector(tab.dataset.target)
         let currSelected  ;
-        let prevSelected;
-        if(selection){
+        if(prevSelected  == 'workButton'){
             currSelected = 'educationButton'
-            prevSelected = 'workButton'
         } else{
             currSelected = 'workButton'
-            prevSelected = 'educationButton'
         }
-        selection = !selection;
 
         tabContents.forEach(tabContent=>{
             tabContent.classList.remove('qualification__active')
@@ -82,6 +79,7 @@ tabs.forEach(tab=>{
         document.getElementById(currSelected).classList.add('qualification__active')
         target.classList.add('qualification__active');
         tab.classList.add('qaulification__active');
+        localStorage.setItem('selection',currSelected);
     })
 })
 
