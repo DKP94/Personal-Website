@@ -1,245 +1,489 @@
-<!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets\css\swiper-bundle.min.css">
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
     <title>Deepak P</title>
     <link rel="icon" href="https://media-exp1.licdn.com/dms/image/C5103AQHsifqlSA9uLA/profile-displayphoto-shrink_200_200/0/1542560899939?e=1614816000&v=beta&t=_txWZMcP746z06VRqo93aYzTs0R_ZhRB7UakSo3L3TA">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <header class="bg-info" style="position:fixed; width: 100%; z-index: 1;">
-        <div class="row text-white">
-            <div class="col-md-6 col-9 p-3 pl-5">
-                <h2>Deepak P</h2>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Deepak</a>
+            <div class="nav__menu" id="nav-menu ">
+                <ul class="nav__list grid">
+                    <li class="nav_item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i> Skills
+                        </a>
+                    </li>
+                    <!--<li class="nav_item">
+                        <a href="#services" class="nav__link">
+                            <i class="uil uil-briefcase-alt nav__icon"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i> Portfolio
+                        </a>
+                    </li>-->
+                    <li class="nav_item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>Contact me
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
-            <div class="col-md-6 col-3 my-auto">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link text-white" href="#home">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-white" href="#info">Info<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-white" href="#experience">Experience<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-white" href="#contact">Connect<span class="sr-only">(current)</span></a>
-                        </li>
-                        <!-- <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li> -->
-                        <!-- <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                          </div>
-                        </li> -->
-                      </ul>
-                    </div>
-                  </nav>
+
+            <div class="nav__btns">
+                <!--Theme change button-->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <section id="home" style="padding-top: 7em; padding-bottom: 3em;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="https://media-exp1.licdn.com/dms/image/C5103AQHsifqlSA9uLA/profile-displayphoto-shrink_200_200/0/1542560899939?e=1614816000&v=beta&t=_txWZMcP746z06VRqo93aYzTs0R_ZhRB7UakSo3L3TA" alt="" class="img-fluid rounded-circle">
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container gid ">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/deepak-p-08620292/" target ="_blank" class="home__social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqbQcwQLqDTwtHMFmnKGXCqvsRgtHZPzRnmVQSzwgddScGchpVHjwPJVxzZGfjHGVZHKsq" target="_blank" class="home__social-icon">
+                            <i class="uil uil-dribbble"></i>
+                        </a>
+                        <a href="https://github.com/Deepakpallath" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547
+                                        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775
+                                        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666
+                                        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346
+                                        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
+                                        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
+                                        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                                
+                                <image class="home__blob-img" xlink:href="assets/img/Deepak.jpg" />
+                            </g>
+                        </svg>
+
+                    </div>
+                    <div class="home__data">
+                        <h1 class="home__title">Hey, I'm Deepak</h1>
+                        <h3 class="home__subtitle">Full Stack Developer</h3>
+                        <p class="home__description">A Passionate Software Engineer with good problem solving skills and 2.5 years experience in Web Development.</p>
+                        <a href="#contact" class="button button--flex"> Contact Me
+                        <i class="uil uil-message button__icon"></i></a>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <h4>Software Engineer <br>
-                    Digital Ventures Lab, <br>
-                    Siemens Gamesa Renewable Energy <br>
-                    Bangalore
-                    </h4>
-                    <blockquote class="blockquote">
-                        <p>Observe | Analyse | Experiment | Learn</p>
-                    </blockquote>
+                <!--<div class="home__scroll">
+                    <a href="#about" class="home__scroll button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>-->
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My introduction</span>
+            <div class="about__container container grid">
+                <!--<img src="" class="about__img"/>-->
+                <div class="about__data">
+                    <p class="about__description">
+                        A Passionate Software Engineer with good problem solving skills and 2.5 years experience in Web Development.
+                    </p>
+                </div>
+                <div class="about__info">
+                    <div>
+                        <span class="about__info-title">2.5+</span>
+                        <span class="about__info-name">Years<br /> experience</span>
+                    </div>
+                    <div>
+                        <span class="about__info-title">3+</span>
+                        <span class="about__info-name">Completed<br /> Projects</span>
+                    </div>
+                </div>
+                <div>
+                    <a download="" href="assets/pdf/Deepak_CV.pdf" class="button button--flex">
+                       Download CV <i class="uil uil-download-alt button__icon"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="bg-light p-5" id="info">
-        <div class="container">
-            <h1 class="text-left">Info</h1>
-            <div class="row pt-3">
-                <div class="col-md-4">
-                    <div class="card text-center p-3" style="width: 18rem;">
-                        <i class="fas fa-user-graduate display-1 text-info"></i>
-                        <div class="card-body">
-                          <h5 class="card-title">Academics</h5>
-                          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+        <!--==================== SKILLS ====================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My Technical Level</span>
+            <div class="skills__container container grid">
+                <div>
+                    <!--==================== SKILLS1 ====================-->
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <i class="uil uil-arrow skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Front End Tech</h1>
+                                <span class="skills__subtitle">More than 2 years</span>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
                         </div>
-                      </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card text-center p-3" style="width: 18rem;">
-                        <!-- <i class="fas fa-laptop-code display-1 text-info"></i> -->
-                        <i class="fas fa-user-tie  display-1 text-info"></i>
-                        <div class="card-body">
-                          <h5 class="card-title">Professional Info</h5>                          
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card text-center p-3" style="width: 18rem;">
-                        <!-- <i class="fas fa-laptop-code display-1 text-info"></i> -->
-                        <i class="fas fa-comment-dots display-1 text-info"></i>
-                        <div class="card-body">
-                          <h5 class="card-title">Connect</h5>
-                          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                        </div>
-                      </div>
-                </div>
-            </div>
-            <div class="row pt-3">
-                <div class="col-md-4">
-                    <div class="card text-center p-3" style="width: 18rem;">
-                        <!-- <i class="fas fa-laptop-code display-1 text-info"></i> -->
-                        <i class="fas fa-fire display-1 text-info"></i>
-                        <div class="card-body">
-                          <h5 class="card-title">Interest</h5>
-                          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card text-center p-3" style="width: 18rem;">
-                        <!-- <i class="fas fa-laptop-code display-1 text-info"></i> -->
-                        <i class="fas fa-male display-1 text-info"></i>
-                        <div class="card-body">
-                          <h5 class="card-title">Personal Info</h5>
-                          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card text-center p-3" style="width: 18rem;">
-                        <!-- <i class="fas fa-laptop-code display-1 text-info"></i> -->
-                        <i class="fas fa-gamepad display-1 text-info"></i>
-                        <div class="card-body">
-                          <h5 class="card-title">Let's Play a Game</h5>
-                          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-light p-5" id="experience">
-        <div class="container">
-            <h1 class="text-left">Experience</h1>
-            <div class="row pt-3">
-                <div class="col-md-4 text-center" >
-                    <a href="https://www.siemensgamesa.com/" style="text-decoration: none; color:black;">
-                    <div class="card text-center" style="width: 18rem;">
-                        <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQHs3bgORiiaLA/company-logo_200_200/0/1593414787946?e=1617235200&v=beta&t=aU5_CKRHHzBfoZ4tiSecJFCF08spci3BHH9EVMeqeM8" 
-                        class="card text-center p-3" alt="">
-                        <div class="card-img-top">
-                            <p class="card-text" >Senior Executive <br>  
-                                Siemens Gamesa Renewable Energy <br>
-                            Jul 2019 - Present</p>
+                        <div class="skills__list grid">
+                            <div class="skills__data">                                
+                                <div class="skills__title">
+                                    <h3 class="skills__name">JavaScript</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills_html"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">                                
+                                <div class="skills__title">
+                                    <h3 class="skills__name">React</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills_html"></span>
+                                </div>
+                            </div>                            
+                            <div class="skills__data">                                
+                                <div class="skills__title">
+                                    <h3 class="skills__name">TypeScript</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills_html"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">                                
+                                <div class="skills__title">
+                                    <h3 class="skills__name">HTML/CSS</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills_html"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">                                
+                                <div class="skills__title">
+                                    <h3 class="skills__name">MobX</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills_html"></span>
+                                </div>
+                            </div>    
                         </div>
                     </div>
-                </a>
-                </div>
-
-                <div class="col-md-4 text-center" >
-                    <a href="https://www.siemensgamesa.com/" style="text-decoration: none; color:black;">
-                    <div class="card text-center" style="width: 18rem;">
-                        <img src="https://media-exp1.licdn.com/dms/image/C510BAQHLvDCsTaCZtw/company-logo_200_200/0/1555177832843?e=1617235200&v=beta&t=OVe7NhnxO9Wjows1zH-6Xim6qIvqLqdlIg6EFy9twhg" 
-                        class="card text-center p-3" alt="">
-                        <div class="card-img-top">
-                            <p class="card-text" >Intern<br> 
-                                EVQPoint<br>
-                            Dec 2018 - Jun 2019</p>
+                    <!--==================== SKILLS2 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-servers skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Backend Tech</h1>
+                                <span class="skills__subtitle">More than 2 years</span>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">                            
+                            <div class="skills__data">                                
+                                <div class="skills__title">
+                                    <h3 class="skills__name">Microsoft Azure</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills_html"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">                                
+                                <div class="skills__title">
+                                    <h3 class="skills__name">C#/Asp .Net Core</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills_html"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">                                
+                                <div class="skills__title">
+                                    <h3 class="skills__name">Java</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills_html"></span>
+                                </div>
+                            </div> 
+                            <div class="skills__data">                                
+                                <div class="skills__title">
+                                    <h3 class="skills__name">SQL</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills_html"></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="bg-light p-5" id="contact">
-        <div class="container">
-            <h1 class="text-left">Contact</h1>
-                <div class="row pt-3">
-                    <div class="col-md-12" >
-                        <form>
-                            <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="exampleInputName" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="exampleInputName">
-                                    </div>
-
-                                    <div class="form-group col-md-6">
-                                        <label for="exampleInputPlace" class="form-label">Place</label>
-                                        <input type="text" class="form-control" id="exampleInputPlace">
-                                    </div>
+        <!--==================== QUALIFICATION ====================-->
+        <section class="qualification section">
+            <h2 class="section__title">Qualification</h2>
+            <span class="section__subtitle">My Personal Journey</span>
+            <div class="qualification__container container">
+                <div class="qualification__tabs">
+                    <div class="qualification__button button--flex qualification__active" id='educationButton' data-target="#education">
+                        <i class="uil uil-graduation-cap qualification__icon"></i>
+                        Education
+                    </div>
+                    <div class="qualification__button button--flex" id='workButton' data-target="#work">
+                        <i class="uil uil-briefcase-alt qualification__icon"></i>
+                        Work
+                    </div>
+                </div>
+                <div class="qualification__sections">
+                    <!--==================== QUALIFICATION content1====================-->
+                    <div class="qualification__content qualification__active" data-content id="education">
+                        <!--==================== QUALIFICATION 1====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Masters in Electrical and Electronics Engineering</h3>
+                                <span class="qualification__subtitle">National Institute of Technology Karnataka, Surathkal</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender-alt"></i>
+                                    2017-2019
                                 </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                         <!-- <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div> -->
-                                    </div>
+                            </div>
 
-                                    <div class="form-group col-md-6">
-                                        <label for="exampleInputMob" class="form-label">Mobile</label>
-                                        <input type="tel" class="form-control" id="exampleInputMob" aria-describedby="MobileHelp">
-                                         <!-- <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div> -->
-                                    </div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                        <!--==================== QUALIFICATION 2====================-->
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">B.Tech</h3>
+                                <span class="qualification__subtitle">Government Engineering College, Thrissur</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender-alt"></i>
+                                    2012-2016
                                 </div>
-                                    <div class="form-group">
-                                        <label for="inputAddress" >Message</label>
-                                        <textarea class="form-control" cols="30" rows="5" placeholder="Type your message here..."></textarea>
-                                         <!-- <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div> -->
-                                    </div>
-                                    <button type="submit" class="btn btn-primary ">Submit</button>
+                            </div>
                             
-                        </form>
+                        </div>
+                        <!--==================== QUALIFICATION 3====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">HSC</h3>
+                                <span class="qualification__subtitle">Sree Valluvanad Vidhya Bhavan, Perinthalmanna</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender-alt"></i>
+                                    2011-2012
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--==================== QUALIFICATION content2====================-->
+                    <div class="qualification__content" data-content id="work">
+                        <!--==================== QUALIFICATION 4====================-->                    
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">Software Developer</h3>
+                                <span class="qualification__subtitle">Siemens Gamesa Renewable Energy Pvt Ltd, Bangalore</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender-alt"></i>
+                                    2019-present
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!--==================== QUALIFICATION 5====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Embedded Systems Intern</h3>
+                                <span class="qualification__subtitle">EVQPoint ,Bangalore</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender-alt"></i>
+                                    2018-2019
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                                         
                     </div>
                 </div>
-        </div>
-    </section>
-
-    <footer class="bg-info">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center text-white">                    
-                <i class="fab fa-linkedin"></i>
-                    <p>Copyrights</p>
-                </div>
             </div>
+        </section>
+
+        <!--==================== SERVICES ====================-->
+        <!--<section class="services section" id="services">
+        </section>-->
+
+        <!--==================== PORTFOLIO ====================-->
+        <!--<section class="portfolio section" id="portfolio">
+        </section>-->
+
+        <!--==================== PROJECT IN MIND ====================-->
+        <!--<section class="project section">
+        </section>-->
+
+        <!--==================== TESTIMONIAL ====================-->
+        <!--<section class="testimonial section">
+        </section>-->
+
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Get in Touch</span>
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-phone contact__icon"></i>
+                        
+                        <div>
+                            <h3 class="contact__title">
+                                Call Me
+                            </h3>
+                            <span class="contact__subtitle">9074925558</span>
+                        </div>
+                    </div>
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+                        
+                        <div>
+                            <h3 class="contact__title">
+                                Email
+                            </h3>
+                            <span class="contact__subtitle">deepakgopalakrishnan94@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact__information">
+                        <i class="uil uil-location-point contact__icon"></i>
+                        
+                        <div>
+                            <h3 class="contact__title">
+                                Location
+                            </h3>
+                            <span class="contact__subtitle">Bangalore, India</span>
+                        </div>
+                    </div>
+                </div>
+                <form action="" class="contact__form grid">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Name</label>
+                            <input type="text" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Email</label>
+                            <input type="text" class="contact__input">
+                        </div>
+                    </div>
+                    <div class="contact__content">
+                        <label for="" class="contact__label">Project</label>
+                        <input type="text" class="contact__input">
+                    </div>
+                    <div class="contact__content">
+                        <label for="" class="contact__label">Message</label>
+                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                    </div>
+
+                    <div>
+                        <a href="#" class="button button__flex">Send Message</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div>
+                <h1 class="footer__title">
+                    Deepak
+                </h1>
+                <span class="footer__subtitle">Full Stack Developer</span>
+            </div>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="#contact" class="footer_link">Contact me</a>
+                </li>
+            </ul>
         </div>
     </footer>
-    <div>
 
-    </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/de48e2836b.js" crossorigin="anonymous"></script>
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets\js\swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
