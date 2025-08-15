@@ -58,13 +58,13 @@ const tabs = document.querySelectorAll('[data-target]'),
 
 tabs.forEach(tab=>{
     tab.addEventListener('click',()=>{
-        let prevSelected = localStorage.getItem('selection') == 'workButton' ? 'workButton' :'educationButton';
+        let prevSelected = localStorage.getItem('selection') ==  'educationButton' ? 'educationButton' :'workButton' ;
         const target = document.querySelector(tab.dataset.target)
         let currSelected  ;
-        if(prevSelected  == 'workButton'){
-            currSelected = 'educationButton'
-        } else{
+        if(prevSelected  == 'educationButton'){
             currSelected = 'workButton'
+        } else{
+            currSelected = 'educationButton'
         }
 
         tabContents.forEach(tabContent=>{
